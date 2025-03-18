@@ -1,0 +1,53 @@
+{
+    "name": "Функциональность вкладки About.",
+    "start": 1742225276967,
+    "stop": 1742225288300,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "2d310388-bb3b-4df8-a610-86da63023d44",
+    "historyId": "50976344289098226f6eba679ef8aee0",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest.aboutFunctionalityTabTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "aboutFunctionalityTabTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(1627)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

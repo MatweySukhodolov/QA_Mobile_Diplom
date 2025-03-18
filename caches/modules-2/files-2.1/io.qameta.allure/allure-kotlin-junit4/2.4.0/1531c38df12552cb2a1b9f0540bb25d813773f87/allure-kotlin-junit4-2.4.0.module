@@ -1,0 +1,104 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.qameta.allure",
+    "module": "allure-kotlin-junit4",
+    "version": "2.4.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.7.1",
+      "buildId": "r5px5th7m5fidouswlebytlt3y"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 6,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.qameta.allure",
+          "module": "allure-kotlin-commons",
+          "version": {
+            "requires": "2.4.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "allure-kotlin-junit4-2.4.0.jar",
+          "url": "allure-kotlin-junit4-2.4.0.jar",
+          "size": 17366,
+          "sha512": "4d17ce6655a7f3126fa4001f9c37569cd9ce23df7c6086ee167737b1749088f5c94995b74380f382f301e77d556fc141862c8e73e22cdc99733fb686e7527d88",
+          "sha256": "f7d5890c136894501c6704992ca30660fd318de0bd43cddd23c548565217c272",
+          "sha1": "b2085b2a24897088b387d718d1a94aea63cc8117",
+          "md5": "8e139c4906d826b9b8e90dc14613a85e"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 6,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "junit",
+          "module": "junit",
+          "version": {
+            "requires": "4.13.2"
+          }
+        },
+        {
+          "group": "io.qameta.allure",
+          "module": "allure-kotlin-commons",
+          "version": {
+            "requires": "2.4.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "allure-kotlin-junit4-2.4.0.jar",
+          "url": "allure-kotlin-junit4-2.4.0.jar",
+          "size": 17366,
+          "sha512": "4d17ce6655a7f3126fa4001f9c37569cd9ce23df7c6086ee167737b1749088f5c94995b74380f382f301e77d556fc141862c8e73e22cdc99733fb686e7527d88",
+          "sha256": "f7d5890c136894501c6704992ca30660fd318de0bd43cddd23c548565217c272",
+          "sha1": "b2085b2a24897088b387d718d1a94aea63cc8117",
+          "md5": "8e139c4906d826b9b8e90dc14613a85e"
+        }
+      ]
+    }
+  ]
+}

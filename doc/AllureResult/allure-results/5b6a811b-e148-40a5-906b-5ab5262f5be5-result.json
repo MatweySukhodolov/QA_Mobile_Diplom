@@ -1,0 +1,53 @@
+{
+    "name": "Ввод в поле \"Категория\", ввод времени вручную, ввод верхних граничных значений в поле титул и описание, а также отмена сохранения в редактировании события",
+    "start": 1742225481970,
+    "stop": 1742225514507,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "5b6a811b-e148-40a5-906b-5ab5262f5be5",
+    "historyId": "8e9c01a440651fb6e0b62220f1f80c75",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.NewsTest.TheCategoryFieldManualTimeCancelingASaveTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.NewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "TheCategoryFieldManualTimeCancelingASaveTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.NewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(1627)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

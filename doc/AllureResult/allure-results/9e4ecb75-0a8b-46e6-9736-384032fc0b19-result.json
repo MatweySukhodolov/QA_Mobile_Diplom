@@ -1,0 +1,53 @@
+{
+    "name": "Функциональность раздела Control panel.",
+    "start": 1742225313251,
+    "stop": 1742225328800,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "9e4ecb75-0a8b-46e6-9736-384032fc0b19",
+    "historyId": "f48cc26556158a11f619d79547184400",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest.controlPanelTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "controlPanelTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(1627)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

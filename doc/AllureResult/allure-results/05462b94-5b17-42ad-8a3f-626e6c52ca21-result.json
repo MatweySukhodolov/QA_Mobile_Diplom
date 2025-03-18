@@ -1,0 +1,53 @@
+{
+    "name": "Функциональность вкладки Love iss all.",
+    "start": 1742225299253,
+    "stop": 1742225313232,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "05462b94-5b17-42ad-8a3f-626e6c52ca21",
+    "historyId": "52ac78ef45b1c57837fcbe58ba52a81d",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest.loveIssAllTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "loveIssAllTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(1627)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

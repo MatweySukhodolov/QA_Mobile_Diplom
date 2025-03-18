@@ -1,0 +1,53 @@
+{
+    "name": "Развертывание и сворачивание вкладки News.",
+    "start": 1742225288306,
+    "stop": 1742225299244,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "63037215-6c70-4e55-a866-ebae298de0f7",
+    "historyId": "3827b8aec61742c5d08bd75a40b16042",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest.deployingAndMinimizingTheNewsTabTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "deployingAndMinimizingTheNewsTabTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.Main_About_ControlPanelTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(1627)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "name": "Создание нового события пустыми данными и отмена создания.",
+    "start": 1742225224802,
+    "stop": 1742225241860,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "ccee1357-8967-4aef-a1a2-5abd4b442cbf",
+    "historyId": "408cbfd9d23aa9a0a6910535d506b3b5",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.CreatedNewsTest.CreatedNewSpaceNewsTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.CreatedNewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "CreatedNewSpaceNewsTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.CreatedNewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(1627)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

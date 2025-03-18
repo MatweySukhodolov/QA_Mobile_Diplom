@@ -1,0 +1,12 @@
+io.qameta.allure.kotlin.junit4.AllureJunit4
+io.qameta.allure.kotlin.junit4.AllureJunit4$extractLabels$1
+io.qameta.allure.kotlin.junit4.AllureJunit4$extractLinks$1
+io.qameta.allure.kotlin.junit4.AllureJunit4$testAssumptionFailure$1
+io.qameta.allure.kotlin.junit4.AllureJunit4$testCases$1
+io.qameta.allure.kotlin.junit4.AllureJunit4$testFailure$1
+io.qameta.allure.kotlin.junit4.AllureJunit4$testFinished$1
+io.qameta.allure.kotlin.junit4.AllureParametrizedRunner
+io.qameta.allure.kotlin.junit4.AllureRunner
+io.qameta.allure.kotlin.junit4.DisplayName
+io.qameta.allure.kotlin.junit4.Tag
+io.qameta.allure.kotlin.junit4.Tags

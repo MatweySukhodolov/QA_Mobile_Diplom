@@ -1,0 +1,3 @@
+androidx.test.espresso.intent
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

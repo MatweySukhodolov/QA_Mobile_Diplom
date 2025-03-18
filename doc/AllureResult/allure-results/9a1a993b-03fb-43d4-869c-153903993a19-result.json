@@ -1,0 +1,53 @@
+{
+    "name": "Валидация поля Категория",
+    "start": 1742225241866,
+    "stop": 1742225259038,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "9a1a993b-03fb-43d4-869c-153903993a19",
+    "historyId": "b770133be910a603587eb28f6d899a17",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.CreatedNewsTest.ValidationCategoryTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.CreatedNewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "ValidationCategoryTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.CreatedNewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(1627)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

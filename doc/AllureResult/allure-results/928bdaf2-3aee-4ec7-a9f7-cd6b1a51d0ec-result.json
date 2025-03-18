@@ -1,0 +1,53 @@
+{
+    "name": "Авторизация пользователя с пустым полем password.",
+    "start": 1742225177388,
+    "stop": 1742225186850,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "928bdaf2-3aee-4ec7-a9f7-cd6b1a51d0ec",
+    "historyId": "29c74d5a6fafde4e2bfab065eca8a7e",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.AuthorizationTest.authInvalidePasswordSpaceTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.AuthorizationTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "authInvalidePasswordSpaceTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.AuthorizationTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(1627)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

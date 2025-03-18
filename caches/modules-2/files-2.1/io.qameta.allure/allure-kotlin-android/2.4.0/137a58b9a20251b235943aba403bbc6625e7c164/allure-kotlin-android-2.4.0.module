@@ -1,0 +1,112 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.qameta.allure",
+    "module": "allure-kotlin-android",
+    "version": "2.4.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.7.1",
+      "buildId": "r5px5th7m5fidouswlebytlt3y"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.qameta.allure",
+          "module": "allure-kotlin-junit4",
+          "version": {
+            "requires": "2.4.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "allure-kotlin-android-2.4.0.aar",
+          "url": "allure-kotlin-android-2.4.0.aar",
+          "size": 37662,
+          "sha512": "2e955070893d319de88c8455b2c03e769ccf9cb60b2fca1de2fc1df1b85cd6b6fe01873f0ed908a57f3d0da812ed02a5d9c9891ae106329ce04ae8fda6277938",
+          "sha256": "8058b16cae5ef30861ad84fc1bafc9a0e5448820de678a8f91afcf5efeb73a34",
+          "sha1": "4f3b620524c4a9c3273a64e2e4d8603b93d30dc1",
+          "md5": "64121f59e96de7404a8b112d344239ba"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.qameta.allure",
+          "module": "allure-kotlin-junit4",
+          "version": {
+            "requires": "2.4.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk7",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "androidx.test.ext",
+          "module": "junit",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "androidx.test",
+          "module": "runner",
+          "version": {
+            "requires": "1.4.0"
+          }
+        },
+        {
+          "group": "androidx.multidex",
+          "module": "multidex",
+          "version": {
+            "requires": "2.0.1"
+          }
+        },
+        {
+          "group": "androidx.test.uiautomator",
+          "module": "uiautomator",
+          "version": {
+            "requires": "2.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "allure-kotlin-android-2.4.0.aar",
+          "url": "allure-kotlin-android-2.4.0.aar",
+          "size": 37662,
+          "sha512": "2e955070893d319de88c8455b2c03e769ccf9cb60b2fca1de2fc1df1b85cd6b6fe01873f0ed908a57f3d0da812ed02a5d9c9891ae106329ce04ae8fda6277938",
+          "sha256": "8058b16cae5ef30861ad84fc1bafc9a0e5448820de678a8f91afcf5efeb73a34",
+          "sha1": "4f3b620524c4a9c3273a64e2e4d8603b93d30dc1",
+          "md5": "64121f59e96de7404a8b112d344239ba"
+        }
+      ]
+    }
+  ]
+}
