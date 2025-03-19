@@ -34,8 +34,7 @@ public class NewsTest extends BaseTest {
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
         newsScreen.clickOnNewsItem(Helper.randomDescription1, randomDescription); // Ищем созданную новость в RecyclerView по заголовку и описанию
         newsScreen.clickNewNews(randomDescription1); // Нажимаем кнопку редактирования новости
-        SystemClock.sleep(1000);
-
+        SystemClock.sleep(2000);
         newsScreen.editNewsTitleNews(randomDescription); // редактируем титул
         newsScreen.editNewsDescriptionNews(Helper.randomDescription1); // редактируем описание
         newsScreen.clickDateNews();// кликаем по дате

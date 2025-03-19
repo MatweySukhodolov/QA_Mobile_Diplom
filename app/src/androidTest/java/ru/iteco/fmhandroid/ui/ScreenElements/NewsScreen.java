@@ -8,6 +8,7 @@ import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.hasDescendant;
+import static androidx.test.espresso.matcher.ViewMatchers.hasSibling;
 import static androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
@@ -18,26 +19,19 @@ import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
-import static ru.iteco.fmhandroid.ui.Data.Helper.randomDescription;
-import static ru.iteco.fmhandroid.ui.Data.Helper.randomDescription1;
-import static ru.iteco.fmhandroid.ui.Data.Helper.randomDescription14symbolCyryllice;
+import static kotlinx.coroutines.flow.FlowKt.withIndex;
 import static ru.iteco.fmhandroid.ui.Data.NewsHelper.childAtPosition;
 
 import android.os.SystemClock;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewParent;
 
 import androidx.test.espresso.action.ViewActions;
 import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.espresso.matcher.ViewMatchers;
 
-import org.hamcrest.Description;
 import org.hamcrest.Matcher;
-import org.hamcrest.TypeSafeMatcher;
 
 import ru.iteco.fmhandroid.R;
-import ru.iteco.fmhandroid.ui.Data.Helper;
 
 public class NewsScreen {
 
@@ -60,15 +54,17 @@ public class NewsScreen {
                         click()
                 ));
     }
-  public void clickNewNews(String title) {
-      onView(allOf(
-              withId(R.id.edit_news_item_image_view),
-              isDescendantOfA(allOf(
-                      withId(R.id.news_item_material_card_view),
-                      hasDescendant(withText(title))
-              ))
-      )).perform(click());
-  }
+
+    public void clickNewNews(String title) {
+        SystemClock.sleep(1000); // Задержка для уверенности, что элемент отобразился
+        onView(allOf(
+                withId(R.id.edit_news_item_image_view),
+                isDescendantOfA(allOf(
+                        withId(R.id.news_item_material_card_view),
+                        hasDescendant(withText(title))
+                ))
+        )).perform(click());
+    }
 
     public void editNewsTitleNews(String newTitle) {
         onView(ViewMatchers.withId(R.id.news_item_title_text_input_edit_text))
