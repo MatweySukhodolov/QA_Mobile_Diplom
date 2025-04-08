@@ -8,21 +8,31 @@ import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.matcher.ViewMatchers.hasDescendant;
 import static androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom;
 import static androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA;
+import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 import static org.hamcrest.Matchers.allOf;
 
 import android.os.SystemClock;
+import android.view.View;
 import android.widget.EditText;
 
+import androidx.test.espresso.NoMatchingViewException;
+import androidx.test.espresso.PerformException;
+import androidx.test.espresso.UiController;
+import androidx.test.espresso.ViewAction;
 import androidx.test.espresso.action.ViewActions;
 import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.espresso.matcher.ViewMatchers;
+import androidx.test.espresso.util.HumanReadables;
+import androidx.test.espresso.util.TreeIterables;
 
+import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 
 import java.util.Random;
+import java.util.concurrent.TimeoutException;
 
 import ru.iteco.fmhandroid.R;
 
