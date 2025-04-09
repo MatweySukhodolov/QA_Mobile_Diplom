@@ -64,22 +64,22 @@ public class BaseTest {
     public void tearDown() {
         // Отмена регистрации IdlingResource
         IdlingRegistry.getInstance().unregister(EspressoIdlingResources.getIdlingResource());
-
-        // Дополнительная очистка состояния при необходимости
-        try {
-            // Проверяем, остались ли мы на экране авторизации
-            TestUtils.waitForViewWithId(R.id.login_text_input_layout, 2000);
-        } catch (Exception e) {
-            // Если нет, пытаемся выйти
-            try {
-                TestUtils.waitForViewWithId(R.id.authorization_image_button, 2000).perform(click());
-                TestUtils.waitForViewWithText("Log out", 2000).perform(click());
-            } catch (Exception ex) {
-                // Последняя попытка через меню
-                TestUtils.waitForViewWithId(R.id.main_menu_image_button, 2000).perform(click());
-                TestUtils.waitForViewWithText("Log out", 2000).perform(click());
-            }
-        }
+//
+//        // Дополнительная очистка состояния при необходимости
+//        try {
+//            // Проверяем, остались ли мы на экране авторизации
+//            TestUtils.waitForViewWithId(R.id.login_text_input_layout, 2000);
+//        } catch (Exception e) {
+//            // Если нет, пытаемся выйти
+//            try {
+//                TestUtils.waitForViewWithId(R.id.authorization_image_button, 2000).perform(click());
+//                TestUtils.waitForViewWithText("Log out", 2000).perform(click());
+//            } catch (Exception ex) {
+//                // Последняя попытка через меню
+//                TestUtils.waitForViewWithId(R.id.main_menu_image_button, 2000).perform(click());
+//                TestUtils.waitForViewWithText("Log out", 2000).perform(click());
+//            }
+//        }
     }
 
     protected void logout() {

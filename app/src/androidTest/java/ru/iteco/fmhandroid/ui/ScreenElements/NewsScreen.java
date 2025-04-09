@@ -127,9 +127,9 @@ public class NewsScreen {
     }
 
     public void notActiveNews() {
-    onView(allOf(withId(R.id.switcher), withText("Active")))
-            .perform(scrollTo(), click());
-}
+        onView(allOf(withId(R.id.switcher), withText("Active")))
+                .perform(scrollTo(), click());
+    }
 
     public void saveNews() {
         onView(ViewMatchers.withId(R.id.save_button)).perform(scrollTo(), ViewActions.click());
@@ -171,11 +171,15 @@ public class NewsScreen {
         onView(withId(android.R.id.button1)).perform(scrollTo(), click());
     }
 
-        public void clickAddNews() {
-            onView(withId(R.id.add_news_image_view)).perform(click());
-        }
+    public void clickAddNews() {
+        onView(withId(R.id.add_news_image_view)).perform(click());
+    }
 
-        public void enterValidTime() {
-            onView(withText("Enter a valid time")).check(matches(isDisplayed()));
-        }
+    public void enterValidTime() {
+        onView(withText("Enter a valid time")).check(matches(isDisplayed()));
+    }
+
+    public void saveNotTimeNews() {
+        onView(ViewMatchers.withId(android.R.id.button2)).perform(scrollTo(), ViewActions.click());
+    }
 }

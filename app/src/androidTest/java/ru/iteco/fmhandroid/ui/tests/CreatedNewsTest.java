@@ -24,16 +24,21 @@ import static ru.iteco.fmhandroid.ui.Data.NewsHelper.childAtPosition;
 
 import android.os.SystemClock;
 
+import androidx.test.espresso.IdlingPolicies;
+import androidx.test.espresso.IdlingRegistry;
 import androidx.test.espresso.action.ViewActions;
 import androidx.test.espresso.matcher.ViewMatchers;
 
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
+import java.util.concurrent.TimeUnit;
+
 import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.Data.Helper;
 import ru.iteco.fmhandroid.ui.ScreenElements.NewsScreen;
+import ru.iteco.fmhandroid.ui.utils.EspressoIdlingResources;
 
 
 public class CreatedNewsTest extends BaseTest {
@@ -43,34 +48,50 @@ public class CreatedNewsTest extends BaseTest {
     @DisplayName("Создание нового события и ввод верхних граничных значений " +
             "в поле Титул и Описание.")
     public void CreatedNewNewsTest() {
-    Helper.authorizationUser(); // авторизация
-    SystemClock.sleep(2000);
-    newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
-    newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
+        Helper.authorizationUser(); // авторизация
+        //SystemClock.sleep(2000);
 
-    newsScreen.clickAddNews(); // выбираем создание новости
-    newsScreen.categoryClickNews(); // выбираем категориь
-    newsScreen.categoryEnterNews("Массаж"); // вводим и подтвердаем категори
-    newsScreen.editNewsTitleNews(randomDescription14symbolCyryllice); // вводим титул
-    newsScreen.editNewsDescriptionNews(randomDescription150symbolLatinice);
-    newsScreen.clickDateNews();// кликаем по дате
-    newsScreen.saveDateNews(); // Подтвердаем выбор даты
-    newsScreen.clickTimeNews(); // кликаем по времени
-    newsScreen.saveTimeNews(); // подтвердаем время
-    newsScreen.saveNews(); // сохраняем
+        // Настройка таймаутов
+        IdlingPolicies.setMasterPolicyTimeout(30, TimeUnit.SECONDS);
+        IdlingPolicies.setIdlingResourceTimeout(30, TimeUnit.SECONDS);
+
+        // Регистрация IdlingResource
+        IdlingRegistry.getInstance().register(EspressoIdlingResources.getIdlingResource());
+
+        newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
+        newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
+
+        newsScreen.clickAddNews(); // выбираем создание новости
+        newsScreen.categoryClickNews(); // выбираем категориь
+        newsScreen.categoryEnterNews("Массаж"); // вводим и подтвердаем категори
+        newsScreen.editNewsTitleNews(randomDescription14symbolCyryllice); // вводим титул
+        newsScreen.editNewsDescriptionNews(randomDescription150symbolLatinice);
+        newsScreen.clickDateNews();// кликаем по дате
+        newsScreen.saveDateNews(); // Подтвердаем выбор даты
+        newsScreen.clickTimeNews(); // кликаем по времени
+        newsScreen.saveTimeNews(); // подтвердаем время
+        newsScreen.saveNews(); // сохраняем
         // Проверка, что новость редактирована
-    newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
-    newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
-    newsScreen.clickOnNewsItem(randomDescription14symbolCyryllice, randomDescription150symbolLatinice); // Ищем созданную новость в RecyclerView по заголовку и описанию
+        newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
+        newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
+        newsScreen.clickOnNewsItem(randomDescription14symbolCyryllice, randomDescription150symbolLatinice); // Ищем созданную новость в RecyclerView по заголовку и описанию
 
-    newsScreen.deleteNewsNews(randomDescription14symbolCyryllice); // удаление
-}
+        newsScreen.deleteNewsNews(randomDescription14symbolCyryllice); // удаление
+    }
 
     @Test
     @DisplayName("Создание нового события пустыми данными и отмена создания.")
     public void CreatedNewSpaceNewsTest() {
         Helper.authorizationUser(); // авторизация
-        SystemClock.sleep(2000);
+        //SystemClock.sleep(2000);
+
+        // Настройка таймаутов
+        IdlingPolicies.setMasterPolicyTimeout(30, TimeUnit.SECONDS);
+        IdlingPolicies.setIdlingResourceTimeout(30, TimeUnit.SECONDS);
+
+        // Регистрация IdlingResource
+        IdlingRegistry.getInstance().register(EspressoIdlingResources.getIdlingResource());
+
         newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
 
@@ -84,14 +105,25 @@ public class CreatedNewsTest extends BaseTest {
 
         newsScreen.cancelEditingNews(); // отменяем сохранение и отменяем отмену
         newsScreen.cancelSaveNews(); // отменяем и подтверэдаем
-            }
+
+        // Отмена регистрации IdlingResource
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResources.getIdlingResource());
+    }
 
     @Test
     @DisplayName("Ввод в поле Титул и Описание данных за пределами верхнего" +
             " граничного значения, ввод в ручную поля Время при добавлении события")
     public void TitleAndDescriptionBeyondTheUpperLimitValueTest() {
         Helper.authorizationUser(); // авторизация
-        SystemClock.sleep(2000);
+//        SystemClock.sleep(2000);
+
+        // Настройка таймаутов
+        IdlingPolicies.setMasterPolicyTimeout(30, TimeUnit.SECONDS);
+        IdlingPolicies.setIdlingResourceTimeout(30, TimeUnit.SECONDS);
+
+        // Регистрация IdlingResource
+        IdlingRegistry.getInstance().register(EspressoIdlingResources.getIdlingResource());
+
         newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
 
@@ -109,13 +141,24 @@ public class CreatedNewsTest extends BaseTest {
         newsScreen.saveTimeNews(); // подтвердаем время
         newsScreen.saveNews(); // сохраняем
         newsScreen.saveNotNews();// Проверка, что cобытие не сохраняется
+
+        // Отмена регистрации IdlingResource
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResources.getIdlingResource());
     }
 
     @Test
     @DisplayName("Валидация поля Категория")
     public void ValidationCategoryTest() {
         Helper.authorizationUser(); // авторизация
-        SystemClock.sleep(2000);
+       // SystemClock.sleep(2000);
+
+        // Настройка таймаутов
+        IdlingPolicies.setMasterPolicyTimeout(30, TimeUnit.SECONDS);
+        IdlingPolicies.setIdlingResourceTimeout(30, TimeUnit.SECONDS);
+
+        // Регистрация IdlingResource
+        IdlingRegistry.getInstance().register(EspressoIdlingResources.getIdlingResource());
+
         newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
 
@@ -132,12 +175,23 @@ public class CreatedNewsTest extends BaseTest {
 
         newsScreen.saveNews(); // сохраняем
         newsScreen.saveNotNews();// Проверка, что cобытие не сохраняется
+
+
+        // Отмена регистрации IdlingResource
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResources.getIdlingResource());
     }
 
     @Test
     @DisplayName("Валидация поля Время при добавлении события")
     public void TimeValidationTest() {
         Helper.authorizationUser(); // авторизация
+
+        // Настройка таймаутов
+        IdlingPolicies.setMasterPolicyTimeout(30, TimeUnit.SECONDS);
+        IdlingPolicies.setIdlingResourceTimeout(30, TimeUnit.SECONDS);
+
+        // Регистрация IdlingResource
+        IdlingRegistry.getInstance().register(EspressoIdlingResources.getIdlingResource());
         SystemClock.sleep(2000);
         newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
@@ -155,6 +209,11 @@ public class CreatedNewsTest extends BaseTest {
         newsScreen.enterMinuteNews(00); // Вводим новое время - минуты
         newsScreen.saveTimeNews(); // подтвердаем время
         newsScreen.enterValidTime(); // проверяем появление ошибки
-         }
+        newsScreen.saveNotTimeNews(); // выходим из часов
+        newsScreen.cancelSaveNews(); // отменяем и подтверэдаем
+
+        // Отмена регистрации IdlingResource
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResources.getIdlingResource());
+    }
 
 }

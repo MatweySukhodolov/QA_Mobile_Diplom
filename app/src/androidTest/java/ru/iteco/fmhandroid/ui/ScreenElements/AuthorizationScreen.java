@@ -10,8 +10,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
-import static ru.iteco.fmhandroid.ui.Data.EspressoIdlingResources.waitFor;
-import static ru.iteco.fmhandroid.ui.Data.EspressoIdlingResources.waitUntilElement;
+//import static ru.iteco.fmhandroid.ui.utils.EspressoIdlingResources.waitFor;
+//import static ru.iteco.fmhandroid.ui.utils.EspressoIdlingResources.waitUntilElement;
 import static ru.iteco.fmhandroid.ui.Data.Helper.enterTextInEditText;
 
 import android.view.View;

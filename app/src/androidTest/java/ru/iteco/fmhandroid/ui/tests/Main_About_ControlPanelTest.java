@@ -27,7 +27,7 @@ public class Main_About_ControlPanelTest extends BaseTest {
     @DisplayName("Функциональность вкладки About.")
     public void aboutFunctionalityTabTest() {
         Helper.authorizationUser(); // авторизация
-        SystemClock.sleep(2000);
+      //  SystemClock.sleep(2000);
         main_About_ControlPanelScreen.navigateToAboutSection(); // открываем главное меню и переходим в раздел About
         main_About_ControlPanelScreen.aboutPrivacyPolicy(); // проверяем ссылку Privace
         main_About_ControlPanelScreen.aboutTermsOfUse(); // проверяем ссылку Terms
@@ -40,7 +40,7 @@ public class Main_About_ControlPanelTest extends BaseTest {
     @DisplayName("Функциональность вкладки Love iss all.")
     public void loveIssAllTest() {
         Helper.authorizationUser();
-        SystemClock.sleep(2000);
+        //SystemClock.sleep(2000);
         main_About_ControlPanelScreen.ourMission();// Кликаем на кнопку "Our Mission"
         main_About_ControlPanelScreen.positionLoveIssAll(0);// Кликаем на первый элемент в RecyclerView
         main_About_ControlPanelScreen.positionLoveIssAll(0);// Кликаем снова на первый элемент
@@ -52,7 +52,7 @@ public class Main_About_ControlPanelTest extends BaseTest {
     @DisplayName("Функциональность раздела Control panel.")
     public void controlPanelTest() {
         Helper.authorizationUser();
-        SystemClock.sleep(2000);
+        //SystemClock.sleep(2000);
         newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
 

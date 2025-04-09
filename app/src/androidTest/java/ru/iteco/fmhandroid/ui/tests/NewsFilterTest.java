@@ -17,7 +17,7 @@ public class NewsFilterTest extends BaseTest {
     @DisplayName("Фильтр по категориям.")
     public void filterCategoryTest() {
         Helper.authorizationUser(); // авторизация
-        SystemClock.sleep(2000);
+        //SystemClock.sleep(2000);
         newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
         newsFilterScreen.clickFilterNews(); // Нажимаем кнопку фильтрации новостей
@@ -31,7 +31,7 @@ public class NewsFilterTest extends BaseTest {
     @DisplayName("Фильтр по дате.")
     public void filterDateTest() {
         Helper.authorizationUser(); // авторизация
-        SystemClock.sleep(2000);
+        //SystemClock.sleep(2000);
         newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
         newsFilterScreen.clickFilterNews(); // Нажимаем кнопку фильтрации новостей
@@ -48,7 +48,7 @@ public class NewsFilterTest extends BaseTest {
     @DisplayName("Фильтр по активным событиям.")
     public void filterActiveTest() {
         Helper.authorizationUser(); // авторизация
-        SystemClock.sleep(2000);
+        //SystemClock.sleep(2000);
         newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
         newsFilterScreen.clickFilterNews(); // Нажимаем кнопку фильтрации новостей
@@ -61,7 +61,7 @@ public class NewsFilterTest extends BaseTest {
     @DisplayName("Фильтр по неактивным событиям.")
     public void filterNotActiveTest() {
         Helper.authorizationUser(); // авторизация
-        SystemClock.sleep(2000);
+      //  SystemClock.sleep(2000);
         newsScreen.navigateToNewsSection(); // Переход в раздел мень и в раздел новости
         newsScreen.clickEditNewsButton(); // Нажимаем кнопку редактирования новостей
         newsFilterScreen.clickFilterNews(); // Нажимаем кнопку фильтрации новостей

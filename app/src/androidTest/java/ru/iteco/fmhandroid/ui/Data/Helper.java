@@ -18,6 +18,8 @@ import android.os.SystemClock;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.test.espresso.IdlingPolicies;
+import androidx.test.espresso.IdlingRegistry;
 import androidx.test.espresso.NoMatchingViewException;
 import androidx.test.espresso.PerformException;
 import androidx.test.espresso.UiController;
@@ -32,9 +34,11 @@ import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import ru.iteco.fmhandroid.R;
+import ru.iteco.fmhandroid.ui.utils.EspressoIdlingResources;
 
 public class Helper {
     // логин и пароль
@@ -64,8 +68,14 @@ public class Helper {
 
     // Метод для создания новости
     public static void createNews() {
+        // Настройка таймаутов
+        IdlingPolicies.setMasterPolicyTimeout(30, TimeUnit.SECONDS);
+        IdlingPolicies.setIdlingResourceTimeout(30, TimeUnit.SECONDS);
+
+        // Регистрация IdlingResource
+        IdlingRegistry.getInstance().register(EspressoIdlingResources.getIdlingResource());
+
         // Открываем меню
-        SystemClock.sleep(3000);
         onView(withId(R.id.main_menu_image_button)).perform(click());
 
         // Переходим в раздел "News"
@@ -82,7 +92,7 @@ public class Helper {
                 .perform(click(),replaceText("День рождения"), ViewActions.closeSoftKeyboard());
 
         // Вводим титул
-       onView(ViewMatchers.withId(R.id.news_item_title_text_input_edit_text))
+        onView(ViewMatchers.withId(R.id.news_item_title_text_input_edit_text))
                 .perform(ViewActions.replaceText(randomDescription1), ViewActions.closeSoftKeyboard());
 
         // Вводим описание новости с использованием случайного значения
@@ -105,11 +115,20 @@ public class Helper {
 
         // Сохраняем новость
         onView(ViewMatchers.withId(R.id.save_button)).perform(scrollTo(), ViewActions.click());
+
+        // Отмена регистрации IdlingResource
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResources.getIdlingResource());
     }
 
     public static void deleteNews() {
+        // Настройка таймаутов
+        IdlingPolicies.setMasterPolicyTimeout(30, TimeUnit.SECONDS);
+        IdlingPolicies.setIdlingResourceTimeout(30, TimeUnit.SECONDS);
+
+        // Регистрация IdlingResource
+        IdlingRegistry.getInstance().register(EspressoIdlingResources.getIdlingResource());
+
         // Открываем меню
-        SystemClock.sleep(3000);
         onView(withId(R.id.main_menu_image_button)).perform(click());
 
         // Переходим в раздел "News"
@@ -129,7 +148,7 @@ public class Helper {
                 ));
 
         // Нажимаем кнопку удаления новости
-        SystemClock.sleep(1000); // Задержка для уверенности, что элемент отобразился
+//        SystemClock.sleep(1000); // Задержка для уверенности, что элемент отобразился
         onView(allOf(
                 withId(R.id.delete_news_item_image_view),
                 isDescendantOfA(allOf(
@@ -140,6 +159,10 @@ public class Helper {
 
         // Подтверждаем удаление
         onView(withId(android.R.id.button1)).perform(scrollTo(), click());
+
+        // Отмена регистрации IdlingResource
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResources.getIdlingResource());
+
     }
 
     // Метод для генерации случайной строки на кириллице
